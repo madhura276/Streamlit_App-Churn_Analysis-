@@ -4,6 +4,9 @@ An end-to-end Machine Learning web application that predicts customer churn risk
 
 ---
 
+## Live Demo
+watch here : https://customer-churn-prediction-system-ab7dxjlk5eo7ptady7hmut.streamlit.app/
+
 ## 📌 Overview
 
 Customer churn is one of the most critical business problems in the telecom industry. This system allows businesses to identify at-risk customers before they leave — enabling proactive retention strategies.
