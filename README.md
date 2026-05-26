@@ -1,4 +1,4 @@
-# 📊 Customer Churn Prediction System
+#  Customer Churn Prediction System
 
 An end-to-end Machine Learning web application that predicts customer churn risk in real time using a trained classification model deployed via Streamlit.
 
@@ -7,7 +7,7 @@ An end-to-end Machine Learning web application that predicts customer churn risk
 ## Live Demo
 watch here : https://customer-churn-prediction-system-ab7dxjlk5eo7ptady7hmut.streamlit.app/
 
-## 📌 Overview
+## Overview
 
 Customer churn is one of the most critical business problems in the telecom industry. This system allows businesses to identify at-risk customers before they leave — enabling proactive retention strategies.
 
@@ -15,7 +15,7 @@ The application takes customer details as input, runs them through a pre-trained
 
 ---
 
-## 🧠 Machine Learning Approach
+## Machine Learning Approach
 
 - **Algorithm:** Logistic Regression / XGBoost (trained model saved as `churn_model.pkl`)
 - **Feature Engineering:** One-hot encoding of categorical variables (Contract type, Internet Service, Payment Method, Tech Support)
@@ -27,13 +27,13 @@ The application takes customer details as input, runs them through a pre-trained
   - Tech Support availability
   - Payment Method
 - **Output:** Churn probability score with risk classification
-  - 🔴 High Risk → probability > 80%
-  - 🟡 Medium Risk → probability between 50%–80%
-  - 🟢 Low Risk → probability < 50%
+  -  High Risk → probability > 80%
+  -  Medium Risk → probability between 50%–80%
+  -  Low Risk → probability < 50%
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 - Real-time churn prediction via interactive web UI
 - Probability-based risk classification (High / Medium / Low)
@@ -43,7 +43,7 @@ The application takes customer details as input, runs them through a pre-trained
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -55,7 +55,7 @@ The application takes customer details as input, runs them through a pre-trained
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Customer-Churn-Prediction-System/
@@ -69,7 +69,7 @@ Customer-Churn-Prediction-System/
 
 ---
 
-## ▶️ How to Run Locally
+##  How to Run Locally
 
 ### Prerequisites
 - Python 3.8 or above
@@ -102,7 +102,7 @@ http://localhost:8501
 
 ---
 
-## 🎮 How to Use
+##  How to Use
 
 1. Open the app in your browser
 2. Enter customer details using the input fields:
@@ -114,7 +114,7 @@ http://localhost:8501
 
 ---
 
-## 📊 Input Features Explained
+##  Input Features Explained
 
 | Feature | Description |
 |---|---|
@@ -127,17 +127,17 @@ http://localhost:8501
 
 ---
 
-## 📈 Risk Classification
+##  Risk Classification
 
 | Risk Level | Churn Probability | Action Recommended |
 |---|---|---|
-| 🔴 High Risk | > 80% | Immediate retention intervention |
-| 🟡 Medium Risk | 50% – 80% | Proactive outreach and offers |
-| 🟢 Low Risk | < 50% | Monitor regularly |
+|  High Risk | > 80% | Immediate retention intervention |
+|  Medium Risk | 50% – 80% | Proactive outreach and offers |
+|  Low Risk | < 50% | Monitor regularly |
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Add SHAP-based model explainability to show feature importance per prediction
 - Integrate a live database for batch customer churn analysis
@@ -147,7 +147,7 @@ http://localhost:8501
 
 ---
 
-## 📌 Requirements
+##  Requirements
 
 Create a `requirements.txt` file with the following:
 
@@ -160,20 +160,9 @@ xgboost
 pickle5
 ```
 
----
+##  License
 
-## 👩‍💻 Author
-
-**Madhura Gundluru**
-- 📧 g.madhura.tech@gmail.com
-- 🔗 [LinkedIn](https://linkedin.com/in/madhura-gundluru)
-- 💻 [GitHub](https://github.com/madhura276)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+MIT
 
 ---
 
