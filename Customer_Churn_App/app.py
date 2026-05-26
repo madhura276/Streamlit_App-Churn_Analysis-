@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-# Load model & columns
 model = pickle.load(open("churn_model.pkl", "rb"))
 columns = pickle.load(open("model_columns.pkl", "rb"))
 
@@ -11,7 +10,6 @@ st.set_page_config(page_title="Churn Predictor", layout="centered")
 st.title("📊 Customer Churn Prediction System")
 st.write("Enter customer details to predict churn risk")
 
-# User inputs
 tenure = st.slider("Tenure (Months)", 0, 72, 12)
 monthly = st.number_input("Monthly Charges", 10.0, 150.0, 50.0)
 fiber = st.selectbox("Fiber Internet?", ["Yes", "No"])
@@ -19,43 +17,34 @@ contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two yea
 tech = st.selectbox("Tech Support?", ["Yes", "No"])
 payment = st.selectbox("Payment Method", ["Electronic check", "Mailed check", "Auto Payment"])
 
-# Create input dictionary
 input_data = {}
 
-# Initialize all columns to 0
 for col in columns:
     input_data[col] = 0
 
-# Set numeric fields
 input_data["tenure"] = tenure
 input_data["MonthlyCharges"] = monthly
 
-# Set contract
 if contract == "One year":
     input_data["Contract_One year"] = 1
 elif contract == "Two year":
     input_data["Contract_Two year"] = 1
 
-# Internet
 if fiber == "Yes":
     input_data["InternetService_Fiber optic"] = 1
 else:
     input_data["InternetService_No"] = 1
 
-# Tech support
 if tech == "Yes":
     input_data["TechSupport_Yes"] = 1
 
-# Payment
 if payment == "Electronic check":
     input_data["PaymentMethod_Electronic check"] = 1
 elif payment == "Mailed check":
     input_data["PaymentMethod_Mailed check"] = 1
 
-# Convert to DataFrame
 input_df = pd.DataFrame([input_data])
 
-# Predict
 if st.button("Predict Churn"):
     prob = model.predict_proba(input_df)[0][1]
 
